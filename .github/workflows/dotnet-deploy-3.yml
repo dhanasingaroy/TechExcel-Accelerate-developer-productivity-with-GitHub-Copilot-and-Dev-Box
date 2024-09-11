@@ -55,8 +55,6 @@ jobs:
       name: dev
       url: https://zhqik2snlkh46-dev.azurewebsites.net/
       # Add protection rules for manual approval
-      reviewers:
-        - dhanasingaroy
     steps:
       - name: 'Login via Azure CLI'
         uses: azure/login@v2.1.1
@@ -73,8 +71,6 @@ jobs:
     environment:
       name: test
       url: https://zhqik2snlkh46-test.azurewebsites.net/
-      reviewers:
-        - dhanasingaroy
     steps:
       - uses: actions/checkout@v3
       - name: 'Login via Azure CLI'
@@ -92,8 +88,6 @@ jobs:
     environment:
       name: prod
       url: https://zhqik2snlkh46-prod.azurewebsites.net/
-      reviewers:
-        - dhanasingaroy
     steps:
       - uses: actions/checkout@v3
       - name: 'Login via Azure CLI'
